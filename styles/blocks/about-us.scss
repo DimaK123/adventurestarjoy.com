@@ -1,0 +1,115 @@
+/* About Us Section Styles */
+.about-us {
+  font-weight: 500;
+
+  /* Section Padding */
+  @include sectionPaddingTop;
+  padding-bottom: 130px;
+
+  /* Background with Gradient Overlay */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/about-us-bg.avif');
+  background-size: cover;
+
+  /* Mobile Adjustments */
+  @include onMobile {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/about-us-bg-mob.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 95px;
+  }
+
+  /* Wrapper for Content Width */
+  &__wrapper {
+    max-width: calc($padding-desktop * 2 + 845px);
+  }
+
+  /* Inner Flex Container */
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 40px;
+
+    @include onMobile {
+      gap: 24px;
+    }
+  }
+
+  /* Section Title */
+  &__section-title {
+    max-width: 845px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+
+    @include onMobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  /* About Text */
+  &__about {
+    font-size: 20px;
+
+    @include onMobile {
+      font-size: 18px;
+    }
+  }
+
+  /* Key Points Section */
+  &__points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: left;
+
+    @include onMobile {
+      font-size: 16px;
+    }
+
+    /* Highlighted Span */
+    span {
+      font-weight: 700;
+      color: $page-light-blue-color;
+    }
+  }
+
+  /* Advantages Container */
+  &__advantages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  /* Single Advantage Block */
+  &__advantage {
+    display: flex;
+    flex: 260px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 30px 27px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+
+    @include onMobile {
+      padding: 30px 35px;
+    }
+
+    /* Advantage Title */
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: -3px;
+    }
+
+    /* Specific Styling for Second Advantage Paragraph */
+    &:nth-of-type(2) p {
+      letter-spacing: -0.64px;
+    }
+  }
+}

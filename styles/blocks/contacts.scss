@@ -1,0 +1,102 @@
+.contacts {
+  @include sectionPaddingTop;
+
+  background-image: url('../images/contact-us-bg.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include onMobile {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/contact-us-bg.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 68% 0%;
+  }
+
+  &__inner {
+    padding-bottom: 225px;
+    @include onMobile {
+      padding-bottom: 90px;
+    }
+  }
+
+  &__section-title {
+    text-align: left;
+
+    margin-bottom: 24px;
+
+    @include onMobile {
+      text-align: center;
+    }
+  }
+
+  &__subtitle-1 {
+    @extend .section-title;
+
+    font-size: 24px;
+    text-align: left;
+
+    margin-bottom: 18px;
+
+    @include onMobile {
+      font-size: 20px;
+      text-align: center;
+
+      margin-bottom: 20px
+    }
+  }
+
+  &__subtitle-2 {
+    @extend .contacts__subtitle-1;
+
+    font-size: 18px;
+    margin-bottom: 32px;
+
+    @include onMobile {
+      text-align: left;
+      text-transform: none;
+
+      margin-bottom: 42px;
+    }
+  }
+
+  &__contact-list-title {
+    @extend .contacts__subtitle-2;
+
+    margin-bottom: 24px;
+
+    @include onMobile {
+      font-size: 18px;
+      text-transform: uppercase;
+
+      margin-bottom: 42px;
+    }
+  }
+
+  &__list {
+    padding: 30px 40px;
+
+    border: 1px solid #FFF;
+    border-radius: 20px;
+
+    @include onMobile {
+      padding: 30px 15px;
+    }
+  }
+
+  &__link {
+    @extend .section-title;
+    text-align: left;
+
+    font-size: 15px;
+
+    @include onMobile {
+      line-height: 1.5;
+    }
+  }
+
+  &__blue-color-text {
+    color: $page-light-blue-color;
+  }
+
+  
+}

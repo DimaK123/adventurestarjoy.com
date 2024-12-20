@@ -1,0 +1,111 @@
+.blog {
+  @include sectionPaddingTop;
+
+  text-align: center;
+
+  padding-bottom: 140px;
+
+  @include onMobile {
+    padding-bottom: 120px;
+  }
+
+  background: linear-gradient(90deg,
+    #130F2A -0.45%,
+    #0B0E2C 12.97%,
+    #18173F 24.19%,
+    #241E43 36.35%,
+    #2E2351 44.1%,
+    #3E2C61 51.31%,
+    #3B2D5F 57.19%,
+    #433264 63.07%,
+    #3C2D5E 72.15%,
+    #29204B 83.24%,
+    #161438 102.46%
+  );
+
+  &__section-title {
+    margin-bottom: 24px;
+  }
+
+  &__about {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    margin-bottom: 55px;
+
+    @include onMobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    @include onMobile {
+      gap: 65px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 405px;
+    gap: 20px;
+
+    min-height: 515px;
+
+    padding: 10px 10px 35px;
+    border-radius: 57px;
+    background-color: #fff;
+
+    position: relative;
+
+    @include onMobile {
+      min-height: 485px;
+      gap: 15px;
+
+      padding: 8px 8px 30px;
+    }
+  }
+
+  &__item-img {
+    border-radius: 50px;
+    width: 100%;
+    height: 370px;
+
+    object-fit: cover;
+  }
+
+  &__item-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+
+    text-transform: uppercase;
+
+    @include onMobile {
+      font-size: 18px;
+    }
+  }
+
+  &__item-link {
+    width: 75px;
+    height: 70px;
+
+    background-image: url("../images/icons/blog-link.svg");
+    background-size: cover;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    @include onMobile {
+      @include figure(60px);
+    }
+  }
+}
