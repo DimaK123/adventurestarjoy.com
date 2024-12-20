@@ -1,0 +1,36 @@
+.header {
+  padding: 16px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+
+  @include onMobile {
+    border-bottom: none;
+  }
+
+  &--with-border {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+  }
+
+  &--pink {
+    background-color: #150B20;
+  }
+
+  &--menu {
+    background: linear-gradient(89deg, rgba(255, 255, 255, 0.10) -15.83%, rgba(26, 19, 40, 0.20) 2.84%, rgba(26, 19, 40, 0.50) 25.38%, rgba(26, 19, 40, 0.70) 49.73%, rgba(26, 19, 40, 0.80) 72.28%, #1A1328 101.89%);
+
+    border-bottom: 2px solid #fff;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    @extend .section-title;
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+}

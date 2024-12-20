@@ -1,0 +1,53 @@
+/* General Page Styles */
+.page {
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+
+  /* Body Styles */
+  &__body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #fff;
+
+    background: linear-gradient(90deg,
+    #130F2A -0.45%,
+    #0B0E2C 12.97%,
+    #18173F 24.19%,
+    #241E43 36.35%,
+    #2E2351 44.1%,
+    #3E2C61 51.31%,
+    #3B2D5F 57.19%,
+    #433264 63.07%,
+    #3C2D5E 72.15%,
+    #29204B 83.24%,
+    #161438 102.46%
+  );
+
+    /* Headings Styles */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Fixed Body Modifier */
+    &--fixed {
+      overflow-y: hidden;
+    }
+
+    position: relative;
+  }
+
+  /* Header Styles */
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,24 @@
+@import 'node_modules/normalize.css/normalize';
+@import './reset';
+
+@import './utils/variables';
+@import './utils/mixins';
+
+@import './blocks/wrapper';
+@import './blocks/grid';
+@import './blocks/menu-backgroung'; 
+@import './blocks/page';
+@import './blocks/section-title';
+@import './blocks/nav';
+@import './blocks/header';
+@import './blocks/hero';
+@import './blocks/action-button';
+@import './blocks/menu-button';
+@import './blocks/about-us';
+@import './blocks/services';
+@import './blocks/blog';
+@import './blocks/reviews';
+@import './blocks/faq';
+@import './blocks/contacts';
+@import './blocks/footer';
+@import './blocks/policy-terms';

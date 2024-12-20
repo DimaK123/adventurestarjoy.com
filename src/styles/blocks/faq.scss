@@ -1,0 +1,67 @@
+.faq {
+  padding: 95px 110px 135px;
+
+  /* Background with Gradient Overlay */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/faq-bg.avif');
+  background-size: cover;
+  
+  /* Mobile Adjustments */
+  @include onMobile {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/faq-bg-mob.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 65px 0 120px;
+  }
+
+  &__section-title {
+    text-align: center;
+
+    margin-bottom: 60px;
+
+    @include onMobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include onMobile {
+      gap: 64px;
+    }
+  }
+
+  &__question-item {
+    padding-right: 115px;
+
+    border-bottom: 2px solid #fff;
+
+    @include onMobile {
+      padding-right: 0;
+    }
+  }
+
+  &__question {
+    color: $page-light-blue-color;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+
+    margin-bottom: 24px;
+  }
+
+  &__answer {
+    font-size: 20px;
+    text-align: justify;
+
+    margin-bottom: 15px;
+
+    @include onMobile {
+      font-size: 16px;
+    }
+  }
+}

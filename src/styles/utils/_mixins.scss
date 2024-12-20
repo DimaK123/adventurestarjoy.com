@@ -1,0 +1,18 @@
+@mixin onMobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin figure($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin sectionPaddingTop {
+  padding-top: 72px;
+
+  @include onMobile {
+    padding-top: 64px;
+  }
+}

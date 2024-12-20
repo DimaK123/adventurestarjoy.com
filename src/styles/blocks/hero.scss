@@ -1,0 +1,94 @@
+/* General Hero Section Styles */
+.hero {
+  font-family: "Poppins", sans-serif;
+  background-image: url('../images/hero-bg.avif');
+  background-size: cover;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+
+  /* Mobile Background Adjustments */
+  @include onMobile {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero-bg.avif');
+    background-size: cover;
+    background-position-x: 53%;
+    background-repeat: no-repeat;
+  }
+
+  /* Hero Inner Container */
+  &__inner {
+    display: grid;
+    align-content: center;
+    height: 100vh;
+
+    @include onMobile {
+      justify-content: center;
+    }
+  }
+
+  /* Hero Text */
+  &__text {
+    margin-bottom: 40px;
+
+    @include onMobile {
+      margin-bottom: 65px;
+    }
+
+    &--hidden {
+      opacity: 0;
+    }
+  }
+
+  /* Hero Section Title */
+  &__section-title {
+    font-size: 50px;
+    text-align: start;
+
+    @include onMobile {
+      font-size: 32px;
+    }
+  }
+
+  /* Hero Subtitle */
+  &__subtitle {
+    @extend .section-title;
+    font-size: 38px;
+    line-height: 1.2;
+    text-align: start;
+    margin-bottom: 24px;
+
+    @include onMobile {
+      font-size: 24px;
+    }
+  }
+
+  /* Paragraph Styles */
+  p {
+    font-weight: 500;
+
+    &:first-of-type {
+      font-size: 22px;
+      margin-bottom: 24px;
+
+      @include onMobile {
+        font-size: 18px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      font-size: 24px;
+
+      @include onMobile {
+        font-size: 16px;
+      }
+    }
+  }
+
+  /* Hero Action Button */
+  &__action-button {
+    max-width: max-content;
+
+    @include onMobile {
+      max-width: 100%;
+    }
+  }
+}

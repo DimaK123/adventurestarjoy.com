@@ -1,0 +1,68 @@
+.policy-terms {
+  padding-bottom: 155px;
+
+  @include onMobile {
+    padding-bottom: 125px;
+  }
+
+  &__inner {
+    padding-top: 50px;
+  }
+
+  h1 {
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    font-size: 20px;
+    text-transform: unset;
+
+    margin-bottom: 50px;
+  }
+
+  p {
+    line-height: 20px;
+    font-weight: 400;
+    @include onMobile {
+      font-size: 14px;
+    }
+  }
+
+  li {
+    @extend p
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+
+    @include onMobile {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__link {
+    color: #fff;
+
+    &--blue {
+      color: #216FFF;
+    }
+  }
+
+  &__list {
+    list-style: disc;
+    padding-left: 25px;
+
+    &--ordered {
+      list-style: decimal;
+    }
+  }
+
+  &__link {
+    word-break: break-all;
+  }
+
+  &__white-text {
+    color: #fff;
+  }
+}

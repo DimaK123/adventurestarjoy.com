@@ -1,0 +1,59 @@
+.nav {
+  &__list {
+    display: flex;
+    gap: 16px;
+
+    @include onMobile {
+      display: none;
+      padding-block: 60px;
+
+      flex-direction: column;
+      align-items: center;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      transform: translateY(calc(100% + 2px));
+
+      background: linear-gradient(89deg, rgba(255, 255, 255, 0.10) -15.83%, rgba(26, 19, 40, 0.20) 2.84%, rgba(26, 19, 40, 0.50) 25.38%, rgba(26, 19, 40, 0.70) 49.73%, rgba(26, 19, 40, 0.80) 72.28%, #1A1328 101.89%);
+    }
+
+    &--menu {
+      display: flex;
+    }
+  }
+
+  &__link {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    &:hover {
+      color: $page-light-blue-color;
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    display: none;
+    @include figure(46px);
+
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--burger {
+      background-image: url('../images/icons/burger.svg');
+      
+    }
+
+    &--close {
+      justify-self: end;
+
+      background-image: url('../images/icons/menu-close.svg');
+    }
+
+    @include onMobile {
+      display: block;
+    }
+  }
+}
